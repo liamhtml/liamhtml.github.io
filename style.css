@@ -2,6 +2,9 @@ html {
   text-align: center;
   font-family: sans-serif;
 }
-.errordiv {
-  padding-top: auto;
+.error-div {
+  text-align: center;
+  font-family: sans-serif;
+  color: black;
+  padding-top: 30px;
 }
