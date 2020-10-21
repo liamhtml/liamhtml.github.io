@@ -8,3 +8,7 @@ html {
   color: black;
   padding-top: 100px;
 }
+input {
+  margin-top: 5px;
+  padding: 2px;
+}
