@@ -1,0 +1,8 @@
+User-agent: *
+# Hey robots, please don't crawl these pages.
+Disallow: /404
+Disallow: /404.html
+Disallow: /website-template.txt
+Disallow: /.htaccess
+# ESPECIALLY not this one.
+Disallow: /secret
