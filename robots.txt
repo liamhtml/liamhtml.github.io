@@ -6,3 +6,4 @@ Disallow: /website-template.txt
 Disallow: /.htaccess
 # ESPECIALLY not this one.
 Disallow: /secret
+Disallow: /secret.html
