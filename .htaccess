@@ -1,6 +1,6 @@
 #set home to index page
 
-DirectoryIndex home
+DirectoryIndex home.html
 
 # mod_rewrite starts here
 
