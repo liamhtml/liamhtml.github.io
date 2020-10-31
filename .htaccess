@@ -1,7 +1,3 @@
-#set home to index page
-
-DirectoryIndex home.html
-
 # mod_rewrite starts here
 
 RewriteEngine on
@@ -17,6 +13,10 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 # Here we actually show the page that has the .html extension
 
 RewriteRule ^(.*)$ $1.html [NC,L]
+
+#set home to index page
+
+DirectoryIndex home.html
 
 
 
