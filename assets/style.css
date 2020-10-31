@@ -44,11 +44,16 @@ code {
 }
 
 /** navbar **/
-nav a {
-   color: black;
+.navbutton {
    text-decoration: none;
-   padding: 20px;
    background-color: #E2E2E2;
+   padding: 10px;
+}
+nav a:hover {
+   background-color: #CACACA;
+}
+#navbar {
+  background-color: #E2E2E2;
 }
 
 /** classes **/
