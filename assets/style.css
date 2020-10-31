@@ -1,14 +1,33 @@
+/** general selectors **/
+
 html {
   text-align: center;
-  font-family: sans-serif;
+  font-family: gi;
 }
+
+/** classes **/
+
+/** 404 page div **/
 .error-div {
   text-align: center;
-  font-family: sans-serif;
+  font-family: gi;
   color: black;
   padding-top: 100px;
 }
-input {
-  margin-top: 5px;
-  padding: 2px;
+
+/** ids **/
+
+/** external fonts **/
+
+/** Glacial Indifference Regular **/
+@font-face  {
+  font-family: gi;
+  src: url(assets/fonts/glacialindifference/gi_regular.otf);
 }
+/** Glacial Indifference Bold **/
+@font-face {
+  font-family: gi;
+  src: url(assets/fonts/glacialindifference/gi_bold.otf);
+  font-weight: bold;
+}
+/** other **/
