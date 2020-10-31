@@ -43,19 +43,6 @@ code {
   font-weight: bold;
 }
 
-/** navbar **/
-.navbutton {
-   text-decoration: none;
-   background-color: #E2E2E2;
-   padding: 10px;
-}
-nav a:hover {
-   background-color: #CACACA;
-}
-#navbar {
-  background-color: #E2E2E2;
-}
-
 /** classes **/
 
 /** 404 page div **/
