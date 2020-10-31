@@ -1,3 +1,7 @@
+#set home to index page
+
+DirectoryIndex home
+
 # mod_rewrite starts here
 
 RewriteEngine on
