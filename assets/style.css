@@ -2,7 +2,7 @@
 
 html {
   text-align: center;
-  font-family: gi;
+  font-family: glacialindifference;
 }
 
 /** classes **/
@@ -10,7 +10,7 @@ html {
 /** 404 page div **/
 .error-div {
   text-align: center;
-  font-family: gi;
+  font-family: glacialindifference;
   color: black;
   padding-top: 100px;
 }
@@ -21,13 +21,13 @@ html {
 
 /** Glacial Indifference Regular **/
 @font-face  {
-  font-family: gi;
-  src: url(assets/fonts/glacialindifference/gi_regular.otf);
+  font-family: glacialindifference;
+  src: url(../assets/fonts/glacialindifference/gi_regular.otf);
 }
 /** Glacial Indifference Bold **/
 @font-face {
-  font-family: gi;
-  src: url(assets/fonts/glacialindifference/gi_bold.otf);
+  font-family: glacialindifference;
+  src: url(../assets/fonts/glacialindifference/gi_bold.otf);
   font-weight: bold;
 }
 /** other **/
