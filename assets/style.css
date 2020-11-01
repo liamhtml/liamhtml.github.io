@@ -17,6 +17,8 @@ h1, h2, h3, h4, h5, h6 {
 /** hyperlink styling **/
 a:link{
   color: #47a4f5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 a:visited{
