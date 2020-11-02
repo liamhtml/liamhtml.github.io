@@ -45,8 +45,23 @@ code {
   font-weight: bold;
 }
 
+/** navbar **/
+nav {
+}
+nav a {
+  text-decoration: none;
+  padding: 1em;
+  font-size: 1.3em;
+}
 /** classes **/
 
+/** page wrapper **/
+.wrapper {
+  background-color: #e3f0fc;
+  width: auto;
+  text-align: center;
+  margin: 1.6em;
+}
 /** 404 page div **/
 .error-div {
   text-align: center;
@@ -55,6 +70,21 @@ code {
   padding-top: 100px;
 }
 
+.nav-item:link {
+  color: #47a4f5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.nav-item:visited {
+  color: #47a4f5;
+}
+.nav-item:hover {
+  color: #95cbfb;
+  text-decoration: none;
+}
+.nav-item:active {
+  color: #95cbfb;
+}
 /** ids **/
 
 /** external fonts **/
