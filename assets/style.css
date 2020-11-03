@@ -4,14 +4,15 @@
 html {
   text-align: center;
   font-family: glacialindifference;
-  color: #1F1F1F;
+  color: white;
+  background-color: #47a4f5;
 }
 
 /** headers **/
 h1, h2, h3, h4, h5, h6 {
   font-family: glacialindifference
   font-weight: bold;
-  color: #000000;
+  color: #ececec;
 }
 
 /** hyperlink styling **/
@@ -48,11 +49,6 @@ code {
 /** navbar **/
 nav {
 }
-nav a {
-  text-decoration: none;
-  padding: 1em;
-  font-size: 1.3em;
-}
 /** classes **/
 
 /** page wrapper **/
@@ -70,21 +66,24 @@ nav a {
 }
 
 .nav-item:link {
-  color: #47a4f5;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .nav-item:visited {
-  color: #47a4f5;
+  color: white;
 }
 .nav-item:hover {
-  color: #95cbfb;
+  color: #d8d8d8;
   text-decoration: none;
 }
 .nav-item:active {
   color: #95cbfb;
 }
 /** ids **/
+
 
 /** external fonts **/
 
