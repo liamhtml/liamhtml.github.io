@@ -69,7 +69,7 @@ nav {
   text-align: center;
   font-family: glacialindifference;
   color: black;
-  padding-top: 100px;
+  padding-top: 2vmin;
 }
 
 .nav-item:link {
@@ -88,6 +88,10 @@ nav {
 }
 .nav-item:active {
   color: #95cbfb;
+}
+
+.liamhtml-logo {
+  margin-bottom: 5vmin;
 }
 /** ids **/
 
