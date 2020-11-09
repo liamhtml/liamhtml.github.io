@@ -1,3 +1,10 @@
+/** COLOR PALETTE **/
+/*
+   Background: White
+   Headers: #9422ed
+   Paragraphs: Black
+*/
+
 /** general selectors **/
 
 /** all **/
@@ -5,19 +12,19 @@ html {
   text-align: center;
   font-family: glacialindifference;
   color: white;
-  background-color: #47a4f5;
+  background-color: white;
 }
 
 /** headers **/
 h1, h2, h3, h4, h5, h6 {
   font-family: glacialindifference
   font-weight: bold;
-  color: #ececec;
+  color: #9422ed;
 }
 
 /** hyperlink styling **/
 a:link{
-  color: #47a4f5;
+  color: #9422ed;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -66,17 +73,17 @@ nav {
 }
 
 .nav-item:link {
-  color: white;
+  color: #9422ed;
   text-decoration: none;
-  padding: 15px;
+  padding: 3.7vmin;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .nav-item:visited {
-  color: white;
+  color: #9422ed;
 }
 .nav-item:hover {
-  color: #d8d8d8;
+  color: #5c0d99;
   text-decoration: none;
 }
 .nav-item:active {
