@@ -128,7 +128,9 @@ nav {
 }
 
 /** rwd and media queries **/
-@media only screen and (min-width: 481px) {
+
+/** pc large window **/
+@media only screen and (min-width: 919px) {
     nav {
       margin-top: 8.5vmin;
       margin-bottom: 0;
@@ -138,14 +140,31 @@ nav {
 
     .liamhtml-logo {
       float: left;
-      margin-left: 6%;
-      margin-right: 8vmin;
+      margin-left: 22%;
+      margin-right: 2%;
       width: 18vmin;
     }
 
     .rwd-nav-button span {
       display: none;
     }
+}
+
+/** pc smaller window **/
+@media screen and (max-width: 918px) and (min-width: 481px) {
+  nav {
+    margin-bottom: 0;
+    display: block;
+  }
+
+  .liamhtml-logo {
+    width: 18vmin;
+    margin-top: 2vmin;
+  }
+
+  .rwd-nav-button span {
+    display: none;
+  }
 }
 
 /** other **/
