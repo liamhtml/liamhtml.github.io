@@ -129,7 +129,7 @@ nav {
 /** rwd and media queries **/
 @media only screen and (min-width: 481px) {
     nav {
-      margin-top: 15vmin;
+      margin-top: 8.5vmin;
       margin-bottom: 0;
       float: left;
       display: inline;
@@ -139,7 +139,7 @@ nav {
       float: left;
       margin-left: 6%;
       margin-right: 8vmin;
-      width: 30vmin;
+      width: 18vmin;
     }
 
     .rwd-nav-button span {
