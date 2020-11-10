@@ -19,6 +19,11 @@
         <a href="projects" class="nav-item">PROJECTS</a>
         <a href="social" class="nav-item">SOCIAL</a>
       </nav>
+      <label class="rwd-nav-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
       <div class="wrapper">
        <p>This website is still in development.</p>
       </div>
