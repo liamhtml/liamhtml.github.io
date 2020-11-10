@@ -66,6 +66,7 @@ nav {
   width: auto;
   text-align: center;
   margin: 1.6em;
+  clear: both;
 }
 /** 404 page div **/
 .error-div {
