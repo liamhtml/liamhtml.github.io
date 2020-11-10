@@ -3,6 +3,7 @@
    Background: White
    Headers: #9422ed
    Paragraphs: Black
+   Other white color (Dropdown): #f9f9f9
 */
 
 /** general selectors **/
@@ -12,13 +13,12 @@ html {
   text-align: center;
   font-family: glacialindifference;
   color: black;
-  background-color: white;
+  margin: 0;
 }
 
 /** headers **/
 h1, h2, h3, h4, h5, h6 {
-  font-family: glacialindifference
-  font-weight: bold;
+  font-family: glacialindifference;
   color: #9422ed;
 }
 
@@ -55,6 +55,8 @@ code {
 
 /** navbar **/
 nav {
+  margin-top: 4.3vmin;
+  text-align: center;
 }
 /** classes **/
 
@@ -91,8 +93,40 @@ nav {
 }
 
 .liamhtml-logo {
-  margin-bottom: 5vmin;
 }
+
+.projects-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.projects-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 25vmin;
+  padding-right: 12px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  /* padding: 12px 7px; */
+  border-radius: 10px;
+  z-index: 1;
+  left: 0;
+}
+
+.projects-dropdown:hover .projects-dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  list-style-type: none;
+  padding-bottom: 1.6vmin;
+}
+
+.dropdown-item:hover {
+  text-decoration: underline;
+}
+
 /** ids **/
 
 
