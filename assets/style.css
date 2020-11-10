@@ -95,12 +95,13 @@ nav {
 
 .liamhtml-logo {
   margin-bottom: 4vmin;
+  width: 40vmin;
 }
 
 .rwd-nav-button span{
   display: block;
   margin: 1.5vmin;
-  height: 0.5vmin;
+  height: 2px;
   width: 7vmin;
   background: #9e39ed;
   clear: both;
@@ -128,7 +129,7 @@ nav {
 /** rwd and media queries **/
 @media only screen and (min-width: 481px) {
     nav {
-      margin-top: 8vmin;
+      margin-top: 15vmin;
       margin-bottom: 0;
       float: left;
       display: inline;
@@ -138,6 +139,7 @@ nav {
       float: left;
       margin-left: 6%;
       margin-right: 8vmin;
+      width: 30vmin;
     }
 
     .rwd-nav-button span {
