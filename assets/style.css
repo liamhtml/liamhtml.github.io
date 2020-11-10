@@ -148,6 +148,10 @@ nav {
     .rwd-nav-button span {
       display: none;
     }
+
+    .mobile-error {
+      display: none;
+    }
 }
 
 /** pc smaller window **/
@@ -163,6 +167,10 @@ nav {
   }
 
   .rwd-nav-button span {
+    display: none;
+  }
+
+  .mobile-error {
     display: none;
   }
 }
