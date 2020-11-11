@@ -30,16 +30,16 @@ a:link{
 }
 
 a:visited{
-  color: #95cbfb;
+  color: #9422ed;
 }
 
 a:hover{
-  color: #95cbfb;
+  color: #5c0d99;
   text-decoration: none;
 }
 
 a:active{
-  color: #95cbfb;
+  color: #5c0d99;
 }
 
 /** code styling **/
@@ -91,7 +91,7 @@ nav {
   text-decoration: none;
 }
 .nav-item:active {
-  color: #95cbfb;
+  color: #5c0d99;
 }
 
 .liamhtml-logo {
