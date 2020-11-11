@@ -96,14 +96,14 @@ nav {
 
 .liamhtml-logo {
   margin-bottom: 4vmin;
-  width: 40vmin;
+  width: 10em;
 }
 
 .rwd-nav-button span{
   display: block;
-  margin: 1.5vmin;
+  margin: 7px;
   height: 2px;
-  width: 7vmin;
+  width: 6vw;
   background: #9e39ed;
   clear: both;
   margin-left: 47%;
