@@ -7,3 +7,5 @@ Disallow: /.htaccess
 # ESPECIALLY not this one.
 Disallow: /secret
 Disallow: /secret.html
+# Sitemap
+Sitemap: https://liamhtml.github.io/sitemap.xml
