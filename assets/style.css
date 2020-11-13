@@ -109,6 +109,36 @@ nav {
   margin-left: 47%;
 }
 
+/** Projects Dropdown **/
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #e7e7e7;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /** ids **/
 
