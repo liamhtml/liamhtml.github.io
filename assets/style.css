@@ -208,9 +208,11 @@ nav {
   }
 }
 
+/** Dropdown positioning across all screens **/
 @media screen and (min-width: 768px) {
    .dropdown-content { 
      display: none; position: absolute; 
     } 
   }
+
 /** other **/
