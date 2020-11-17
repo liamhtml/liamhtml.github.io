@@ -129,6 +129,7 @@ nav {
   /**  remove this once you have images, future liam **/
   background-color: lightgray;
   overflow: hidden;
+  filter: brightness(97%);
   transition: 0.2s;
 }
 
@@ -136,6 +137,11 @@ nav {
   filter: brightness(80%);
   transform: scale(1.05, 1.05);
   cursor: pointer;
+}
+
+.flex-container > div > a > img {
+  height: 100%;
+  max-width: 100%;
 }
 
 /** Projects Dropdown **/
