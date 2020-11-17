@@ -10,10 +10,10 @@
     <link href="assets/images/liamhtml.ico" rel="shortcut icon" type="image/icon">
   </head>
     <body>
-      <a href="index"><img src="assets/images/liamhtml.png" class="liamhtml-logo" alt="liamhtml logo" title="liamhtml"></a>
+      <a href="/"><img src="assets/images/liamhtml.png" class="liamhtml-logo" alt="liamhtml logo" title="liamhtml"></a>
       <br>
       <nav>
-        <a href="index" class="nav-item">HOME</a>
+        <a href="/" class="nav-item">HOME</a>
         <a href="about" class="nav-item">ABOUT</a>
         <a href="blog" class="nav-item">BLOG</a>
         <div class="dropdown">
