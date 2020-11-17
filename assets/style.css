@@ -20,6 +20,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-family: glacialindifference;
   color: #9422ed;
+  font-weight: normal;
 }
 
 /** hyperlink styling **/
@@ -109,6 +110,33 @@ nav {
   margin-left: 47%;
 }
 
+/** Projects item flex layout **/
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;;
+}
+
+.flex-container > div {
+  box-sizing: border-box;
+  height: 75vw;
+  width: 90vw;
+  margin: 4%;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  /**  remove this once you have images, future liam **/
+  background-color: lightgray;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.flex-container > div:hover {
+  filter: brightness(80%);
+  transform: scale(1.05, 1.05);
+}
+
 /** Projects Dropdown **/
 .dropdown {
   overflow: hidden;
@@ -185,6 +213,16 @@ nav {
     .mobile-error {
       display: none;
     }
+
+    .flex-container > div {
+      height: 27vw;
+      width: 27vw;
+      margin: 2%;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+      transition: 0.3s;
+    }
 }
 
 /** pc smaller window **/
@@ -205,6 +243,16 @@ nav {
 
   .mobile-error {
     display: none;
+  }
+
+  .flex-container > div {
+    height: 70vw;
+    width: 70vw;
+    margin: 2%;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    transition: 0.3s;
   }
 }
 
