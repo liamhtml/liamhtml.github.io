@@ -4,6 +4,7 @@ Disallow: /404
 Disallow: /404.html
 Disallow: /website-template.txt
 Disallow: /.htaccess
+Disallow: /googlef1551531829e2ea7.html
 # ESPECIALLY not this one.
 Disallow: /secret
 Disallow: /secret.html
