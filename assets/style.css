@@ -178,6 +178,18 @@ nav {
   display: block;
 }
 
+/** Project Pages Styling **/
+.project-paragraph {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.project-functions {
+  margin: 0 auto;
+  width: 100%;
+  text-align: left;
+}
+
 /** ids **/
 
 
@@ -229,6 +241,18 @@ nav {
       line-height: 75px;
       font-size: 30px;
       transition: 0.3s;
+    }
+
+    /** Project Pages Styling **/
+    .project-paragraph {
+      margin: 0 auto;
+      width: 36%;
+    }
+
+    .project-functions {
+      margin: 0 auto;
+      width: 36%;
+      text-align: left;
     }
 }
 
