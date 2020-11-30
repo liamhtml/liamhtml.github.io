@@ -193,12 +193,6 @@ nav {
   text-align: left;
 }
 
-.project-table {
-      width: 30%; 
-      margin: 0 auto;
-}
-
-
 
 /** ids **/
 
@@ -265,10 +259,6 @@ nav {
       text-align: left;
     }
 
-    .project-table {
-      width: 30%; 
-      margin: 0 auto;
-    }
 }
 
 /** pc smaller window **/
@@ -301,17 +291,13 @@ nav {
     transition: 0.3s;
   }
 
-  .project-table {
-      width: 30%; 
-      margin: 0 auto;
-    }
 }
 
 /** Dropdown positioning across all screens **/
 @media screen and (min-width: 768px) {
-   .dropdown-content { 
-     display: none; position: absolute; 
-    } 
+   .dropdown-content {
+     display: none; position: absolute;
+    }
   }
 
 /** other **/
