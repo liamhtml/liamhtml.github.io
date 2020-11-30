@@ -227,7 +227,7 @@ nav {
 /** pc large window **/
 @media only screen and (min-width: 919px) {
     nav {
-      margin-top: 13vmin;
+      margin-top: 11vmin;
       margin-bottom: 0;
       float: left;
       display: inline;
@@ -237,7 +237,7 @@ nav {
       float: left;
       margin-left: 22%;
       margin-right: 2%;
-      padding-top: 4vmin;
+      padding-top: 2vmin;
       width: 18vmin;
     }
 
