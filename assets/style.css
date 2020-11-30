@@ -23,6 +23,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+/** table headers **/
+th {
+  font-weight: normal;
+}
+
 /** hyperlink styling **/
 a:link{
   color: #9422ed;
@@ -188,6 +193,13 @@ nav {
   text-align: left;
 }
 
+.project-table {
+      width: 30%; 
+      margin: 0 auto;
+}
+
+
+
 /** ids **/
 
 
@@ -252,6 +264,11 @@ nav {
       width: 36%;
       text-align: left;
     }
+
+    .project-table {
+      width: 30%; 
+      margin: 0 auto;
+    }
 }
 
 /** pc smaller window **/
@@ -283,6 +300,11 @@ nav {
     font-size: 30px;
     transition: 0.3s;
   }
+
+  .project-table {
+      width: 30%; 
+      margin: 0 auto;
+    }
 }
 
 /** Dropdown positioning across all screens **/
