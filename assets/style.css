@@ -1,7 +1,7 @@
 /** COLOR PALETTE **/
 /*
    Background: White
-   Headers: #9422ed
+   Complimentary: #9422ed
    Paragraphs: Black
    Other white color (Dropdown): #f9f9f9
 */
@@ -12,16 +12,18 @@
 html {
   text-align: center;
   font-family: glacialindifference;
-  color: black;
+  width: 100%;
+}
+
+body {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 /** headers **/
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   font-family: glacialindifference;
-  color: #9422ed;
-  font-weight: normal;
 }
 
 /** table headers **/
@@ -70,18 +72,14 @@ nav {
 .nav-container {
   background-color: #FFFFFF;
   padding-bottom: 30px;
-  position: absolute;
   width: 100vw;
-  left: 0px;
-  top: 0px;
+  height: 27vh;
+  box-sizing: border-box;
 }
 /** classes **/
 
 /** page wrapper **/
 .wrapper {
-  width: auto;
-  text-align: center;
-  margin: 1.6em;
   clear: both;
 }
 /** 404 page div **/
@@ -92,6 +90,7 @@ nav {
   padding-top: 2vmin;
 }
 
+/** Navbar **/
 .nav-item:link {
   color: #9422ed;
   text-decoration: none;
@@ -113,6 +112,7 @@ nav {
 .liamhtml-logo {
   margin-bottom: 4vmin;
   width: 150px;
+  text-align: center
 }
 
 .rwd-nav-button span{
@@ -123,6 +123,14 @@ nav {
   background: #9e39ed;
   clear: both;
   margin-left: 47%;
+}
+
+/** index.html scroll snap slides **/
+div.scroll-snap-section {
+  background: linear-gradient(180deg, #A341F0 0%, rgba(255, 255, 255, 0) 100%), #9422ED;
+  margin: 0 auto;
+  width: 100vw;
+  height: 73vh;
 }
 
 /** Projects item flex layout **/
@@ -207,6 +215,53 @@ nav {
 
 /** ids **/
 
+/** home page **/
+#hello {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  margin-top: 200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 80%;
+  font-size: 1.5em;
+}
+
+#portfolio-button {
+  display: block;
+  width: 60vw;
+  margin-top: 20px;
+  margin-left: 7%;
+  height: 109px;
+  padding-top: 40px;
+  padding-left: 50px;
+  background: #FFFFFF;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 26px;
+  box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+  text-align: left;
+}
+
+#portfolio-button:hover {
+  background-color: #dbdbdb;
+}
+
+#portfolio-button:after {
+  content: "";
+  display: block;
+  background: url("../assets/images/#") no-repeat;
+  width: 20px;
+  height: 20px;
+  float: left;
+}
 
 /** external fonts **/
 
@@ -233,6 +288,11 @@ nav {
       display: inline;
     }
 
+    .nav-container {
+      height: 20vh;
+      width: 100vw;
+    }
+
     .liamhtml-logo {
       float: left;
       margin-left: 22%;
@@ -251,6 +311,16 @@ nav {
 
     .mobile-error {
       display: none;
+    }
+
+    #hello {
+      width: 40%;
+      margin-left: 8%;
+    }
+
+    #portfolio-button {
+      width: 30vw;
+      margin-left: 8%;
     }
 
     .flex-container > div {
@@ -277,15 +347,23 @@ nav {
 
 }
 
-/** pc smaller window **/
+/** pc smaller window and tablet **/
 @media screen and (max-width: 919px) and (min-width: 481px) {
   nav {
     margin-bottom: 0;
     display: block;
   }
 
+  .nav-container {
+    height: 30vh
+  }
+
+  div.scroll-snap-section {
+    height: 70vh;
+  }
+
   .liamhtml-logo {
-    width: 18vw;
+    width: 130px;
     margin-top: 2vmin;
   }
 
