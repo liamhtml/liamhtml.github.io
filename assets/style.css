@@ -13,6 +13,7 @@ html {
   text-align: center;
   font-family: glacialindifference;
   width: 100%;
+  box-sizing: border-box;
 }
 
 body {
@@ -125,13 +126,6 @@ nav {
   margin-left: 47%;
 }
 
-/** index.html scroll snap slides **/
-div.scroll-snap-section {
-  background: linear-gradient(180deg, #A341F0 0%, rgba(255, 255, 255, 0) 100%), #9422ED;
-  margin: 0 auto;
-  width: 100vw;
-  height: 73vh;
-}
 
 /** Projects item flex layout **/
 
@@ -215,54 +209,6 @@ div.scroll-snap-section {
 
 /** ids **/
 
-/** home page **/
-#hello {
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-  margin-top: 200px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 80%;
-  font-size: 1.5em;
-}
-
-#portfolio-button {
-  display: block;
-  width: 60vw;
-  margin-top: 20px;
-  margin-left: 7%;
-  height: 109px;
-  padding-top: 40px;
-  padding-left: 50px;
-  background: #FFFFFF;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 26px;
-  box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-  box-sizing: border-box;
-  transition: background-color 0.3s;
-  text-align: left;
-}
-
-#portfolio-button:hover {
-  background-color: #dbdbdb;
-}
-
-#portfolio-button:after {
-  content: "";
-  display: block;
-  background: url("../assets/images/#") no-repeat;
-  width: 20px;
-  height: 20px;
-  float: left;
-}
-
 /** external fonts **/
 
 /** Glacial Indifference Regular **/
@@ -313,16 +259,6 @@ div.scroll-snap-section {
       display: none;
     }
 
-    #hello {
-      width: 40%;
-      margin-left: 8%;
-    }
-
-    #portfolio-button {
-      width: 30vw;
-      margin-left: 8%;
-    }
-
     .flex-container > div {
       height: 27vw;
       width: 27vw;
@@ -356,10 +292,6 @@ div.scroll-snap-section {
 
   .nav-container {
     height: 30vh
-  }
-
-  div.scroll-snap-section {
-    height: 70vh;
   }
 
   .liamhtml-logo {
