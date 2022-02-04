@@ -19,35 +19,37 @@ body {
 
 h1 {
     margin: 0 auto;
+    text-align: center;
     padding-top: 20px;
     font-weight: bold;
 }
 
 h3 {
     font-weight: 500;
+    text-align: left;
+    margin: 0 auto;
+    padding: 10px;
 }
 
-#content {
+main {
     margin: 0 auto;
-    width: 60%;
+    width: 300px;
+    text-align: left;
 }
 
 summary {
     font-weight: bold;
     font-size: large;
     line-height: 25px;
+    padding-left: 10px;
 }
 
-#details-container {
-    max-width: 200px;
-    text-align: left;
-    margin: 0 auto;
+summary:hover {
+    cursor:pointer;
 }
 
 ul {
-    max-width: 200px;
-    text-align: left;
-    margin: 0 auto;
+    margin: 0;
 }
 
 footer {
@@ -70,6 +72,18 @@ a > img {
 a > img:hover {
     transition: 0.3s;
     filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(432%) hue-rotate(325deg) brightness(114%) contrast(80%);
+}
+
+.social-1 {
+    height: 50px;
+}
+
+.social-2 {
+    height: 45px;
+}
+
+@media screen and (max-width: 400px) {
+  
 }
 
 a:link {
