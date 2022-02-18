@@ -50,7 +50,6 @@
         // hiddenText is the text that will be hidden in the shown text (string)
         // shownText is the visible message that the hidden text will be hidden in (string)
         function encode(shownText, hiddenText) {
-            hiddenText = btoa(hiddenText);
             // converts text to binary
             let hiddenTextBinary = hiddenText.split('').map(function (char) {
                 return char.charCodeAt(0).toString(2);
@@ -58,7 +57,7 @@
             // converts binary to zero-width spaces
             let hiddenTextZeroWidth = hiddenTextBinary.replace(/0/g, '\u200D');
             hiddenTextZeroWidth = hiddenTextZeroWidth.replace(/1/g, '\u200C');
-            return hiddenTextZeroWidth + shownText;
+            return shownText.slice(0, shownText.length / 2) + hiddenTextZeroWidth + shownText.slice(shownText.length / 2);
         };
 
         // decode() function, deciphers zero width characters in a message encoded with the encode() function
@@ -74,7 +73,6 @@
             let hiddenTextNonBinary = hiddenTextBinary.split(" ").map(function (t) {
                 return String.fromCharCode(parseInt(t, 2));
             }).join("");
-            hiddenTextNonBinary = atob(hiddenTextNonBinary);
             return hiddenTextNonBinary;
         };
 
