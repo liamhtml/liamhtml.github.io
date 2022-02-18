@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="wow very secret">
+    <meta name="keywords"
+        content="liamhtml, HTML, JS, CSS, JavaScript, html, css, js, javascript, portfolio, liamhtml portfolio, dev, developer, web dev, website, web developer, web development, development, coder, code, programming, programmer, home, index, home page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kent | liamp.dev</title>
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/kent.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1>kent</h1>
+    <p>just a pretty basic steganography tool. hides invisible characters in text to spell out a message</p>
+    <div id="grid">
+        <div class="grid-item">
+            <h2>encode</h2>
+            <div>
+                <p>visible message</p>
+                <textarea class="input" id="input-1" cols="30" rows="6"></textarea>
+            </div>
+            <div>
+                <p>hidden message</p>
+                <textarea class="input" id="input-2" cols="30" rows="6"></textarea>
+            </div>
+            <button type="submit" id="encode-button" onclick="encodeInput()">encode</button>
+            <div style="visibility: hidden;" id="encode-result-div">
+                <p>result</p>
+                <textarea class="input" id="encode-result" cols="30" rows="6"></textarea>
+            </div>
+        </div>
+        <div class="grid-item">
+            <h2>decode</h2>
+            <div>
+                <p>text to decode</p>
+                <textarea class="input" id="input-3" cols="30" rows="6"></textarea>
+            </div>
+            <button type="submit" id="decode-button" onclick="decodeInput()">decode</button>
+            <div style="visibility: hidden;" id="decode-result-div">
+                <p>result</p>
+                <textarea class="input" id="decode-result" cols="30" rows="6"></textarea>
+            </div>
+        </div>
+    </div>
+    <script>
+        // encode() function, hides zero width spaces in your text that will spell out a message
+        // hiddenText is the text that will be hidden in the shown text (string)
+        // shownText is the visible message that the hidden text will be hidden in (string)
+        function encode(shownText, hiddenText) {
+            hiddenText = btoa(hiddenText);
+            // converts text to binary
+            let hiddenTextBinary = hiddenText.split('').map(function (char) {
+                return char.charCodeAt(0).toString(2);
+            }).join('\u200B');
+            // converts binary to zero-width spaces
+            let hiddenTextZeroWidth = hiddenTextBinary.replace(/0/g, '\u200D');
+            hiddenTextZeroWidth = hiddenTextZeroWidth.replace(/1/g, '\u200C');
+            return hiddenTextZeroWidth + shownText;
+        };
+
+        // decode() function, deciphers zero width characters in a message encoded with the encode() function
+        // text is the input text to be decoded (string)
+        function decode(text) {
+            // remove irrelevant characters
+            let hiddenTextBinary = text.replace(/[^\u200D|\u200C|\u200B]/g, '');
+            // converts zero-width spaces to text
+            hiddenTextBinary = hiddenTextBinary.replace(/\u200D/g, '0');
+            hiddenTextBinary = hiddenTextBinary.replace(/\u200C/g, '1');
+            hiddenTextBinary = hiddenTextBinary.replace(/\u200b/g, ' ');
+            // converts binary to nonbinary (inclusivity is important)
+            let hiddenTextNonBinary = hiddenTextBinary.split(" ").map(function (t) {
+                return String.fromCharCode(parseInt(t, 2));
+            }).join("");
+            hiddenTextNonBinary = atob(hiddenTextNonBinary);
+            return hiddenTextNonBinary;
+        };
+
+        function encodeInput() {
+            let message = document.getElementById('input-1').value;
+            let hiddenMessage = document.getElementById('input-2').value;
+            let encodedMessage = encode(message, hiddenMessage);
+            let resultDiv = document.getElementById('encode-result-div');
+            resultDiv.style.visibility = 'visible';
+            let result = document.getElementById('encode-result');
+            result.value = encodedMessage;
+        }
+
+        function decodeInput() {
+            let text = document.getElementById('input-3').value;
+            let decodedMessage = decode(text);
+            let resultDiv = document.getElementById('decode-result-div');
+            resultDiv.style.visibility = 'visible';
+            let result = document.getElementById('decode-result');
+            result.value = decodedMessage;
+        }
+    </script>
+</body>
+
+</html>
