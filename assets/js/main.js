@@ -33,7 +33,17 @@ for (let e = 0; e < 800; e++) {
 
     stars.push({
         star: star,
-        geometry: starGeometry
+        geometry: starGeometry,
+        start: {
+            x: starX,
+            y: starY,
+            z: starZ
+        },
+        end: {
+            x: starX,
+            y: starY,
+            z: starZ + 0.2
+        }
     });
     scene.add(star);
 }
@@ -43,18 +53,64 @@ let p = 0;
 
 // animation loop
 function animate() {
-    camera.position.z -= 0.005;
-
+    if (i < 800 || i > 1125) {
+        camera.position.z -= 0.002;
+    }
     // start to speed up after about 13s
-    if (i > 800) {
-        camera.position.z -= (0.01 * (p/12));
+    else if (i > 800 && i < 1125) {
+        camera.position.z -= (0.01 * (p/10));
         p++;
     }
 
+    // the speed at which lines are stretched and squished
+    const change = i / 150;
     // create hyperspace lines
-    if (i > 1100) {
+    if (i > 1100  && i < 1112) {
         for (let e = 0; e < stars.length; e++) {
             const starDatum = stars[e];
+            const pos = starDatum.geometry.getAttribute("position");
+
+            // set the new position of the end point
+            pos.setXYZ(1, starDatum.end.x, starDatum.end.y, starDatum.end.z - change);
+            starDatum.end.z -= change;
+            // update the vertex buffer in graphics memory
+            pos.needsUpdate = true;
+            // update the bounds to support, e.g., frustum culling
+            starDatum.geometry.computeBoundingBox();
+            starDatum.geometry.computeBoundingSphere();
+        }
+    } else if (i > 1112) {
+        for (let e = 0; e < stars.length; e++) {
+            const starDatum = stars[e];
+            const pos = starDatum.geometry.getAttribute("position");
+
+            // set the new position of the end point
+            pos.setXYZ(0, starDatum.start.x, starDatum.start.y, starDatum.start.z - change);
+            starDatum.start.z -= change;
+            // update the vertex buffer in graphics memory
+            pos.needsUpdate = true;
+            // update the bounds to support, e.g., frustum culling
+            starDatum.geometry.computeBoundingBox();
+            starDatum.geometry.computeBoundingSphere();
+            
+            // once the hyperspace lines are done shortening stop the movement of the start vertex
+            if (starDatum.start.z - starDatum.end.z < 0.5) {
+                // make sure every star is the right length
+                for (let o = 0; o < stars.length; o++) {
+                    const starDatum = stars[o];
+                    const pos = starDatum.geometry.getAttribute("position");
+
+                    // set the new position of the start point
+                    pos.setXYZ(0, starDatum.end.x, starDatum.end.y, starDatum.end.z + 0.2);
+                    starDatum.start.z += 0.2;
+                    // update the vertex buffer in graphics memory
+                    pos.needsUpdate = true;
+                    // update the bounds to support, e.g., frustum culling
+                    starDatum.geometry.computeBoundingBox();
+                    starDatum.geometry.computeBoundingSphere();
+                }
+                break;
+            }
         }
     }
 
